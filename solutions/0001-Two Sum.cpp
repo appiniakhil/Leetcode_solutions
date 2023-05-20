@@ -20,6 +20,7 @@ public:
 
         //Optimised Approach
         //Time Complexity : O(n) 
+        //Using hash
         unordered_map<int, int> hash;
         vector<int> ans;
 
