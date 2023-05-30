@@ -25,6 +25,7 @@ public:
 
         //Optimised Approach
         //Time Complexity:O(n) && Space Complexity:O(1)
+        //Two pointer Approach
         int n = nums.size();
         int j = -1;
         for(int i =0;i<n;i++)
