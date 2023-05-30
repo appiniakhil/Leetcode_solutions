@@ -11,7 +11,7 @@ public:
         // {  
         //     count = 0; 
         //     while(i < n && nums[i] != 1) 
-        //     { 
+        //     {
         //         i++;
         //     }  
         //     while(i < n && nums[i] == 1) 
