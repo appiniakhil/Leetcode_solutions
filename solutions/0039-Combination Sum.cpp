@@ -1,7 +1,8 @@
 class Solution {
 public:
     //Using Recursion
-    //Time Complexity :O(n*(2^n)) && Space Complexty: O(n)
+    //Time Complexity : O((2^k)*k) and Space Complexity: O(x*k)
+    //where k is the average length of every combinations and x is the no of combinations
     
     void findCombination(int ind, int target, vector<int> &arr, vector<vector<int>> &ans, vector<int> &ds)
     {
