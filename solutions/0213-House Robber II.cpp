@@ -1,6 +1,7 @@
 class Solution {
 public:
-    //We are using same logic as problem number 198
+    //We are using same logic as problem number 198 and the only difference is first and last elemnt cannot be in same subarray.
+    //So we will split the array into two and finding maximum between them.
     
     int helper(vector<int>& nums) {
         //Space Optimisation
