@@ -1,5 +1,6 @@
 class Solution {
 public:
+    
     bool solve(vector<vector<char>> &board)
     {
         for(int i =0;i<board.size();i++)
