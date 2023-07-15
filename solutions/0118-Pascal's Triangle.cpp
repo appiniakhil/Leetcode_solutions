@@ -1,6 +1,6 @@
 class Solution {
 public:
-    //Naive Approach
+
     //Time Complexity :O(n*n) && Space Complexity :O(n*n)
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> dp(numRows);
