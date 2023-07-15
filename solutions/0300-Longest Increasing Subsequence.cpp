@@ -88,31 +88,57 @@ public:
     //     return dp[0][0];
     // }
 
-    //Using Space Optmisation
+    //Using Space Optimisation
     //Time Complexity :O(n * n) && Space Complexity :O(1)
+    // int lengthOfLIS(vector<int>& nums) {
+    //     int n = nums.size();
+
+    //     vector<int> cur(n+1,0), front(n+1,0);
+
+    //     for(int index=n-1;index>=0;index--)
+    //     {
+    //         for(int previndex = index-1;previndex>=-1;previndex--)
+    //         {
+    //             int notPick = front[previndex+1];
+
+    //             int pick = 0;
+    //             if(previndex == -1 || nums[index] > nums[previndex])
+    //             {
+    //                 pick = 1 + front[index+1];
+    //             }
+
+    //            cur[previndex+1] = max(notPick, pick);
+    //         }
+
+    //         front = cur;
+    //     }
+
+    //     return front[0];
+    // }
+
+    //Using 1d dp
+    //Time Complexity :O(n * n) && Space Complexity :O(n)
     int lengthOfLIS(vector<int>& nums) {
+
         int n = nums.size();
 
-        vector<int> cur(n+1,0), front(n+1,0);
+        vector<int> dp(n,1);
 
-        for(int index=n-1;index>=0;index--)
+        int maxi = 1;
+
+        for(int index=1;index<n;index++)
         {
-            for(int previndex = index-1;previndex>=-1;previndex--)
+            for(int previndex=0;previndex<index;previndex++)
             {
-                int notPick = front[previndex+1];
-
-                int pick = 0;
-                if(previndex == -1 || nums[index] > nums[previndex])
+                if(nums[previndex] < nums[index])
                 {
-                    pick = 1 + front[index+1];
+                    dp[index] = max(dp[index], 1 + dp[previndex]);
                 }
 
-               cur[previndex+1] = max(notPick, pick);
+                maxi = max(maxi,dp[index]);
             }
-
-            front = cur;
         }
 
-        return front[0];
+        return maxi;
     }
 };
