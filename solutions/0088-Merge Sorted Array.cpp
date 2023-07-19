@@ -32,9 +32,9 @@ public:
 
         vector<int> ans;
 
-        while (i < m && j < n) 
+        while(i < m && j < n) 
         {
-            if (nums1[i] < nums2[j]) 
+            if(nums1[i] < nums2[j]) 
             {
                 ans.push_back(nums1[i]);
                 i++;
@@ -46,12 +46,12 @@ public:
             }
         }
 
-        for (; i < m; i++)
+        for(; i < m; i++)
         {
             ans.push_back(nums1[i]); 
         }
 
-        for (; j < n; j++) 
+        for(; j < n; j++) 
         {
             ans.push_back(nums2[j]);
         }
