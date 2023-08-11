@@ -9,7 +9,7 @@
  */
 class Solution {
 public:
-    //Time Complexity :O(n) && Space Complexity :O(h) where h is the height of tje tree.
+    //Time Complexity :O(n) && Space Complexity :O(h) where h is the height of the tree.
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if(root == NULL || root == p || root == q)
         {
