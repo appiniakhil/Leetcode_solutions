@@ -12,7 +12,7 @@
 class Solution {
 public:
 
-    //Time Complexity :O(n) && Space Complexity :O(n)
+    //Time Complexity :O(nlogn) && Space Complexity :O(n)
     map<int, int> mp;
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
 
