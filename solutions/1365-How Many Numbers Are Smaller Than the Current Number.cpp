@@ -1,6 +1,6 @@
 class Solution {
 public:
-    //Time Complexity :O(n) && Space Complexity :O(n)
+    //Time Complexity :O(n * n) && Space Complexity :O(n)
     vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
         int n = nums.size();
         vector<int> ans;
