@@ -1,1 +1,21 @@
+class Solution {
+public:
+    //Time Complexity :O(n * n) && Space Complexity :O(1)
+    string reverseWords(string s) {
+        int n = s.length();
 
+        int j=0;
+        for(int i=0;i<n;i++)
+        {
+            if(s[i] == ' ')
+            {
+                reverse(s.begin() + j,s.begin() + i);
+                j=i+1;
+            }
+        }
+
+        reverse(s.begin()+j,s.end());
+
+        return s;
+    }
+};
