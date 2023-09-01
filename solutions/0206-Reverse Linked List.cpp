@@ -30,26 +30,48 @@ public:
 
     //Recursive Solution
     //Time Complexity :O(n) && Space Complexity :O(n)
-    void helper(ListNode* &head, ListNode* curr,ListNode* prev) {
+    // void helper(ListNode* &head, ListNode* curr,ListNode* prev) {
+
+    //     //Base Case
+    //     if(curr == NULL)
+    //     {
+    //         head = prev;
+    //         return;
+    //     }
+
+    //     ListNode* forward = curr->next;
+    //     helper(head,forward,curr);
+    //     curr->next = prev;
+    // }
+
+    // ListNode* reverseList(ListNode* head) {
+
+    //     ListNode* curr = head;
+    //     ListNode* prev = NULL;
+    //     helper(head,curr,prev);
+
+    //     return head;
+    // }
+
+    //Another Recursive Solution
+    //Time Complexity :O(n) && Space Complexity :O(n)
+    ListNode* helper(ListNode* &head) {
 
         //Base Case
-        if(curr == NULL)
+        if(head == NULL || head->next == NULL)
         {
-            head = prev;
-            return;
+            return head;
         }
 
-        ListNode* forward = curr->next;
-        helper(head,forward,curr);
-        curr->next = prev;
+        ListNode* head1 = helper(head->next);
+
+        head->next->next = head;
+        head->next = NULL;
+
+        return head1;
     }
 
     ListNode* reverseList(ListNode* head) {
-
-        ListNode* curr = head;
-        ListNode* prev = NULL;
-        helper(head,curr,prev);
-
-        return head;
+        return helper(head);
     }
 };
