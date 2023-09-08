@@ -17,7 +17,7 @@ public:
     // }
 
     //Binary Search
-    //Time Complexity :O(n) && Space Complexity :O(1)
+    //Time Complexity :O(logn) && Space Complexity :O(1)
     bool search(vector<int>& nums, int target) {
         int n = nums.size();
 
