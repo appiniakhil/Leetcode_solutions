@@ -45,3 +45,4 @@ public:
         return (float)(nums1[size/2] + nums1[size/2 -1])/2;
 
     }
+};
