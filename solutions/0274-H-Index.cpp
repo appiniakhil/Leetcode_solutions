@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //Time Complexity :O(n) && Space Complexity : O(1)
     int hIndex(vector<int>& citations) {
         int n = citations.size();
         //Sorts in descending order
@@ -21,5 +22,4 @@ public:
         
         return ans;
     }
-    +
 };
