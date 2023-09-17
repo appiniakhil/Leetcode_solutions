@@ -13,23 +13,40 @@ class Solution {
 public:
     //Using Recursion
     //Time Complexity :O(n) && Space Complexity :O(n)
+    // TreeNode* searchBST(TreeNode* root, int val) {
+    //     if(root == NULL)
+    //     {
+    //         return NULL;
+    //     }
+
+    //     if(root->val == val)
+    //     {
+    //         return root;
+    //     }
+    //     else if(root->val > val)
+    //     {
+    //         return searchBST(root->left, val);
+    //     }
+    //     else
+    //     {
+    //         return searchBST(root->right, val);
+    //     }
+    // }
+
+    //Time Complexity :O(logn) && Space Complexity :O(1)
     TreeNode* searchBST(TreeNode* root, int val) {
-        if(root == NULL)
+        while(root != NULL && root->val != val)
         {
-            return NULL;
+            if(root->val < val)
+            {
+                root = root->right;
+            }
+            else
+            {
+                root = root->left;
+            }
         }
 
-        if(root->val == val)
-        {
-            return root;
-        }
-        else if(root->val > val)
-        {
-            return searchBST(root->left, val);
-        }
-        else
-        {
-            return searchBST(root->right, val);
-        }
+        return root;
     }
 };
