@@ -1,6 +1,6 @@
 class Solution {
 public:
-    
+    //Time Complexity :O(n!) && Space Complexity :O(n * n)
     void solve(int col, vector<string> &board, vector<vector<string>> &ans, vector<int> &leftRow, vector<int> &upperDiagonal, vector<int> &lowerDiagonal, int n)
     {
         if(col == n)
