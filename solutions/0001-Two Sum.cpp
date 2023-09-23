@@ -22,6 +22,7 @@ public:
         //Time Complexity : O(n) 
         //Using hash
         unordered_map<int, int> hash;
+        
         vector<int> ans;
 
         for (int i = 0; i < nums.size(); i++) 
