@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //Time Complexity :O(nlogn) && Space Complexity :O(1)
     bool canMakeArithmeticProgression(vector<int>& arr) {
         int n = arr.size();
 
