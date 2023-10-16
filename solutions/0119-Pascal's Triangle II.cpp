@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    //Time Complexity ;O(n*n) && Space Complexity :O(n*n)
+    //Time Complexity :O(n*n) && Space Complexity :O(n*n)
     vector<int> getRow(int rowIndex) {
         vector<vector<int>> dp(rowIndex+1);
 
