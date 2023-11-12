@@ -1,6 +1,6 @@
 class Solution {
 public:
-    //Time Complexity :O(n * n) && Space Complexity :O(1)
+    //Time Complexity :O(n * n) && Space Complexity :O(n)
     int numBusesToDestination(vector<vector<int>>& routes, int source, int target) {
         if(source == target)
         {
