@@ -1,35 +1,46 @@
 class Solution {
 public:
-    void reverseArray(vector<int>&nums,int i,int j)
-    {
-        while(i<j)
-        {
-            swap(nums[i++],nums[j--]);
-        }
-    }
+    //Time Complexity :O(n) && Space Complexity :O(n)
+    // void rotate(vector<int>& nums, int k) {
+    //     int n = nums.size();
+    //     if(k > n)
+    //     {
+    //         k = k % n;
+    //     }
+
+    //     vector<int> ans;
+
+    //     for(int i=n-1;i>=n-k;i--)
+    //     {
+    //         ans.push_back(nums[i]);
+    //     }
+
+    //     reverse(ans.begin(), ans.end());
+
+    //     for(int i=0;i<n-k;i++)
+    //     {
+    //         ans.push_back(nums[i]);
+    //     }
+
+    //     nums = ans;
+    // }
+
+    //Time Complexity :O(n) && Space Complexity :O(1)
     void rotate(vector<int>& nums, int k) {
-        //Naive Approach
-        //Time Complexity :O(n^2)
-        //Time Limit Exceeded
-        // for(int i =1;i<=k;i++)
-        // {
-        //     int temp = nums[0];
-        //     for(int j=1;j<nums.size();j++)
-        //     {
-        //         int temp1 = nums[j];
-        //         nums[j] = temp;
-        //         temp = temp1;
-        //     }
-        //     nums[0] = temp;
-        // }
+        int n = nums.size();
 
-        //Optimised Approach
-        //Time Complexity :O(n)
-        int n=nums.size();
-        k=k%n;
-        reverseArray(nums,0,n-k-1);
-        reverseArray(nums,n-k,n-1);
-        reverseArray(nums,0,n-1);
+        if(k > n)
+        {
+            k = k % n;
+        }
 
+        if(k > 0)
+        {
+            reverse(nums.begin() ,nums.end());
+
+            reverse(nums.begin(), nums.begin() + k);
+
+            reverse(nums.begin() + k, nums.end());
+        }
     }
 };
