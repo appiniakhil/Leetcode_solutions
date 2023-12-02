@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //Timee Complexity :O(n) && Space Complexity :O(1)
     int countCharacters(vector<string>& words, string chars) {
         unordered_map<char, int> chars_count;
         for(char c : chars)
@@ -31,7 +32,7 @@ public:
                 res += word.size();
             }
         }
-        
+
         return res;
     }
 };
